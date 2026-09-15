@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, Helvetica, sans-serif ;
+    background-color: #F8FAFC; 
+    margin: 0;
+    padding: 10px;
+}
+h1 {
+    margin: 21px 0px 10px 0px ;
+}
+.intro_heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile_photo img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #FFFFFF;
+}
+
+@media (max-width: 768px) {
+    .intro_heading {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile_photo img {
+        width: 100px;
+        height: 100px;
+        margin-top: 10px;
+    }
+}
+.blue_box {
+    color: #FFFFFF;
+    margin : 10px 0px ;
+    background-color: #2563EB ;
+    border-radius: 10px; 
+    padding: 1px 10px;
+}
+.light_box{
+    background-color: #DBEAFE;
+    color: #1E293B ;
+    border-radius: 10px;
+    margin : 10px 0px ;
+    padding: 1px 10px;
+}
+.blue_box,
+.light_box {
+    box-sizing: border-box;
+}
+.skill_list {
+    display: flex;
+    gap: 10px;
+}
+
+@media (max-width: 768px) {
+    .skill_list {
+        flex-direction: column;
+    }
+}
+.skill_list_lang {
+    flex : 1 ;
+    margin : 10px ;
+}
+.skill{
+    text-align: center;
+}
+.myname{
+    font-size: 25px;
+    font-weight: bold;
+}
+.myproapp {
+    display: flex;
+    gap: 10px;
+}
+
+@media (max-width: 768px) {
+    .myproapp {
+        flex-direction: column;
+    }
+}
+.course {
+    font-weight: bold;
+    font-size: 20px;
+}
+a {
+    color: #2563EB;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    word-break: break-word;
+}
+a:hover {
+    color: #FFFFFF;
+    background-color: #2563EB;
+    text-decoration: none;
+}
