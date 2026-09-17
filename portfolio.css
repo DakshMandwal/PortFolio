@@ -1,8 +1,10 @@
 body {
-    font-family: Arial, Helvetica, sans-serif ;
-    background-color: #F8FAFC; 
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F8FAFC;
     margin: 0;
     padding: 10px;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 h1 {
     margin: 21px 0px 10px 0px ;
@@ -98,5 +100,38 @@ a {
 a:hover {
     color: #FFFFFF;
     background-color: #2563EB;
+    text-decoration: none;
+}
+section {
+    scroll-margin-top: 80px ;
+}
+html {
+    scroll-behavior: smooth;
+}
+.nav_bar {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin: 20px 0;
+    width: 100%;
+    box-sizing: border-box;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+.contact-link {
+    color: #DBEAFE;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    word-break: break-word;
+}
+.contact-link:hover {
+    color: #2563EB;
+    background-color: #DBEAFE;
     text-decoration: none;
 }
