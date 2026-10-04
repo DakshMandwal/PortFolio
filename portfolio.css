@@ -1,22 +1,65 @@
+
+/* ---------- GLOBAL RESET ---------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    scroll-behavior: smooth;
+    overflow-x: clip;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #0F172A;
+    color: #F8FAFC;
+
     margin: 0;
     padding: 10px;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    color: #F8FAFC;
+    width: 100%;
+    min-width: 0;
 }
+
+/* ---------- MAIN CONTAINER ---------- */
+/* Maximum width on desktop; shrinks on smaller screens */
+.container {
+    width: 100%;
+    max-width: 800px;
+    min-width: 0;
+    margin: 0 auto;
+}
+
+/* ---------- HEADINGS ---------- */
 h1 {
-    margin: 21px 0px 10px 0px ;
+    margin: 21px 0 10px;
 }
+
 .intro_heading {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 15px;
+}
+
+.intro_name {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.myname {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.profile_photo {
+    flex-shrink: 0;
 }
 
 .profile_photo img {
+    display: block;
     width: 120px;
     height: 120px;
     border-radius: 50%;
@@ -24,25 +67,14 @@ h1 {
     border: 4px solid #FFFFFF;
 }
 
-@media (max-width: 768px) {
-    .intro_heading {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .profile_photo img {
-        width: 100px;
-        height: 100px;
-        margin-top: 10px;
-    }
-}
-
+/* ---------- BOXES ---------- */
 .blue_box {
     color: #FFFFFF;
-    margin: 10px 0px;
     background-color: #3B82F6;
     border-radius: 10px;
+    margin: 10px 0;
     padding: 1px 10px;
+    min-width: 0;
 }
 
 .light_box {
@@ -50,93 +82,166 @@ h1 {
     color: #F8FAFC;
     border: 1px solid #334155;
     border-radius: 10px;
-    margin: 10px 0px;
+    margin: 10px 0;
     padding: 1px 10px;
+    min-width: 0;
 }
 
-.blue_box,
-.light_box {
-    box-sizing: border-box;
-}
+/* ---------- SKILLS ---------- */
 .skill_list {
     display: flex;
     gap: 10px;
+    min-width: 0;
 }
 
-@media (max-width: 768px) {
-    .skill_list {
-        flex-direction: column;
-    }
-}
 .skill_list_lang {
-    flex : 1 ;
-    margin : 10px ;
+    flex: 1 1 0;
+    min-width: 0;
+    margin: 10px;
+    overflow-wrap: anywhere;
 }
-.skill{
+
+.skill {
     text-align: center;
 }
-.myname{
-    font-size: 25px;
-    font-weight: bold;
-}
+
+/* ---------- PROJECTS ---------- */
 .myproapp {
     display: flex;
     gap: 10px;
+    min-width: 0;
 }
 
-@media (max-width: 768px) {
-    .myproapp {
-        flex-direction: column;
-    }
+.myproapp > * {
+    flex: 1 1 0;
+    min-width: 0;
 }
+
 .course {
     font-weight: bold;
     font-size: 20px;
+    overflow-wrap: anywhere;
 }
+
+/* ---------- LINKS ---------- */
 a {
-    color: #2563EB;
+    color: #60A5FA;
     text-decoration: none;
     font-weight: 600;
     padding: 4px 8px;
     border-radius: 6px;
     transition: all 0.3s ease;
-    word-break: break-word;
+    overflow-wrap: anywhere;
 }
+
 a:hover {
     color: #FFFFFF;
     background-color: #2563EB;
-    text-decoration: none;
 }
-section {
-    scroll-margin-top: 80px ;
-}
-html {
-    scroll-behavior: smooth;
-}
-.nav_bar {
-    padding: 10px 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 8px;
-    margin: 20px 0;
-    width: 100%;
-    box-sizing: border-box;
-    flex-wrap: nowrap;
-    white-space: nowrap;
-    overflow-x: auto;
-}
+
 .contact-link {
-    color: #1E293B;
+    color: #93C5FD;
     text-decoration: none;
     font-weight: 600;
     padding: 4px 8px;
     border-radius: 6px;
     transition: all 0.3s ease;
-    word-break: break-word;
+    overflow-wrap: anywhere;
 }
+
 .contact-link:hover {
-    color: #F8FAFC;
-    background-color: #1E293B;
-    text-decoration: none;
+    color: #FFFFFF;
+    background-color: #334155;
+}
+
+/* ---------- NAVBAR ---------- */
+.nav_bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4px;
+
+    width: 100%;
+    min-width: 0;
+    margin: 20px 0;
+    padding: 10px 8px;
+
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    overflow-x: auto;
+    scrollbar-width: thin;
+}
+
+.nav_bar a {
+    flex-shrink: 0;
+    padding: 4px 5px;
+    font-size: 14px;
+}
+
+/* ---------- SECTIONS ---------- */
+section {
+    min-width: 0;
+    scroll-margin-top: 80px;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* ---------- TABLET AND MOBILE ---------- */
+@media (max-width: 768px) {
+    .intro_heading {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro_name {
+        max-width: 100%;
+    }
+
+    .profile_photo img {
+        width: 100px;
+        height: 100px;
+        margin-top: 10px;
+    }
+
+    .skill_list,
+    .myproapp {
+        flex-direction: column;
+    }
+
+    .skill_list_lang {
+        flex: 1 1 auto;
+        width: auto;
+        margin: 10px 0;
+    }
+
+    .course {
+        font-size: 18px;
+    }
+}
+
+/* ---------- VERY SMALL PHONES ---------- */
+@media (max-width: 400px) {
+    body {
+        padding: 6px;
+    }
+
+    .blue_box,
+    .light_box {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .myname {
+        font-size: 22px;
+    }
+
+    .nav_bar {
+        justify-content: flex-start;
+    }
+
+    .nav_bar a {
+        font-size: 13px;
+    }
 }
