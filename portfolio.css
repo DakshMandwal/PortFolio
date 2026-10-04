@@ -140,7 +140,7 @@ a:hover {
 }
 
 .contact-link {
-    color: #93C5FD;
+    color: #1E293B;
     text-decoration: none;
     font-weight: 600;
     padding: 4px 8px;
@@ -151,7 +151,7 @@ a:hover {
 
 .contact-link:hover {
     color: #FFFFFF;
-    background-color: #334155;
+    background-color: #1E293B;
 }
 
 /* ---------- NAVBAR ---------- */
