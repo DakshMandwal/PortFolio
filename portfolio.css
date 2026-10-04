@@ -1,10 +1,11 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: black;
+    background-color: #0F172A;
     margin: 0;
     padding: 10px;
     box-sizing: border-box;
     overflow-x: hidden;
+    color: #F8FAFC;
 }
 h1 {
     margin: 21px 0px 10px 0px ;
@@ -35,20 +36,24 @@ h1 {
         margin-top: 10px;
     }
 }
+
 .blue_box {
     color: #FFFFFF;
-    margin : 10px 0px ;
-    background-color: #2563EB ;
-    border-radius: 10px; 
-    padding: 1px 10px;
-}
-.light_box{
-    background-color: #DBEAFE;
-    color: #1E293B ;
+    margin: 10px 0px;
+    background-color: #3B82F6;
     border-radius: 10px;
-    margin : 10px 0px ;
     padding: 1px 10px;
 }
+
+.light_box {
+    background-color: #1E293B;
+    color: #F8FAFC;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    margin: 10px 0px;
+    padding: 1px 10px;
+}
+
 .blue_box,
 .light_box {
     box-sizing: border-box;
@@ -122,7 +127,7 @@ html {
     overflow-x: auto;
 }
 .contact-link {
-    color: #DBEAFE;
+    color: #1E293B;
     text-decoration: none;
     font-weight: 600;
     padding: 4px 8px;
@@ -131,7 +136,7 @@ html {
     word-break: break-word;
 }
 .contact-link:hover {
-    color: #2563EB;
-    background-color: #DBEAFE;
+    color: #F8FAFC;
+    background-color: #1E293B;
     text-decoration: none;
 }
